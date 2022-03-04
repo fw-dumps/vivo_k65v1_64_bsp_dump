@@ -1,0 +1,63 @@
+#属性说明:
+#ro.oem.version                            用途: oem版本号一般不变
+#ro.product.model                          用途: 入网名，保密项目前期配置为项目名，解密之后改为入网名(下同) 
+#ro.product.device                         用途: 配合ro.build.fingerprint修改而修改的属性,值为入网名
+#ro.product.name                           用途: 配合ro.build.fingerprint修改而修改的属性,值为入网名
+#ro.vivo.product.release.model             用途: 与BBK_PRODUCT_RELEASE_MODEL值保持一致，值为入网名
+#ro.vivo.product.release.name              用途: 与BBK_PRODUCT_RELEASE_NAME值保持一致，值为入网名
+#ro.product.customize.bbk                  用途: 出货国家或地区 外销默认为国家码
+#ro.vivo.product.model                     用途: 项目名称
+#persist.sys.vivo.product.cust             用途: 用于软件升级相关。如：在线升级
+#ro.product.country.region                 用途: 国家-地区 外销默认为国家码
+#ro.product.customize.comercial            用途: 商业定制类型
+#ro.hardware.bbk                           用途: 项目硬件版本号，该属性逐步弃用，替代的属性为ro.vivo.hardware.version
+#ro.vivo.hardware.version                  用途: 项目硬件版本号
+#ro.product.model.bbk                      用途: 项目名称 该属性逐步弃用，替代的属性为ro.vivo.product.model
+#ro.vivo.camera.watermark                  用途: 相机水印专用,外销需要相机水印属性时配置,内销可配可不配(优先取ro.vivo.market.name)默认vivo+项目名代替，如vivo PD1911F_EX
+
+ro.oem.version=V1.00.20150519
+ro.product.model=V2043
+ro.vivo.camera.watermark=Y20 2021
+ro.product.device=2026
+ro.product.name=2026EC
+ro.vivo.product.release.model=2043
+ro.vivo.product.release.name=2043
+ro.product.customize.bbk=PK
+ro.vivo.product.model=PD2036F_EX
+persist.sys.vivo.product.cust=PK
+ro.vivo.oem.model=PD2036DF_EX
+
+ro.product.country.region=PK
+ro.product.customize.comercial=NULL
+
+ro.hardware.bbk=PD2036F_EXMA
+ro.vivo.hardware.version=PD2036F_EXMA
+ro.product.model.bbk=PD2036F_EX
+
+ro.com.google.ime.theme_id=5
+ro.com.google.ime.key_border = true
+ro.com.google.ime.corner_key_r = 25
+ro.com.google.ime.corner_key_l = 25
+ro.com.google.ime.kb_pad_port_r=5
+ro.com.google.ime.kb_pad_port_l=5
+ro.com.google.ime.kb_pad_port_b=2
+ro.com.google.ime.kb_pad_land_r=55
+ro.com.google.ime.kb_pad_land_l=55
+ro.com.google.ime.kb_pad_land_b=2
+ro.com.google.ime.system_lm_dir=/system/media/ime/google/d3_lms/
+ro.boot.product.hardware.sku=fingerprint
+
+ro.vivo.oem.name=PD2036DF_EX_PK_NULL_NULL
+ro.vivo.product.version=PD2036DF_EX_A_1.10.2
+ro.build.version.bbk=PD2036DF_EX_A_1.10.2
+ro.build.fingerprint=vivo/2026EC/2026:10/QP1A.190711.020/compiler01122029:user/release-keys
+ro.com.google.clientidbase=android-vivo
+ro.com.google.clientidbase.cr=
+ro.system.vivo.tierlevel=1
+ro.com.google.rlz_ap_whitelist=
+ro.com.google.rlzbrandcode=
+ro.com.google.clientidbase.ms=android-vivo-rvo3
+ro.com.google.clientidbase.vs=android-vivo-rvo3
+ro.com.google.clientidbase.tx=android-vivo-rvo3
+ro.build.netaccess.version=PD2036DF_EX_A_1.10.2
+ro.build.software.version=PD2036DF_EX_A_1.10.2
