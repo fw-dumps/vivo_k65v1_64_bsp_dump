@@ -1,0 +1,14 @@
+#!/system/bin/sh
+# added for checking whether if last normal-boot (after ota) finished or not      01/15/2019@chenyuqin
+/system/bin/dd if=/dev/zero of=/dev/block/bootdevice/by-name/reserved bs=1 count=8 seek=3672072 conv=notrunc && log -t recovery "succeeded to clear last-normal-boot-retry-count" || log -t recovery "failed to clear last-normal-boot-retry-count"
+/system/bin/dd if=/dev/zero of=/dev/block/bootdevice/by-name/reserved bs=1 count=8 seek=3672088 conv=notrunc && log -t recovery "succeeded to clear last-ota-to-boot-retry-count" || log -t recovery "failed to clear last-ota-to-boot-retry-count"
+if ! applypatch --check EMMC:/dev/block/platform/bootdevice/by-name/survival:100663296:5f70ebef3104ad7a0f4e77986150c2e3da28ae63; then
+  applypatch  \
+          --patch /system/wwh \
+          --source EMMC:/dev/block/platform/bootdevice/by-name/boot:100663296:a947a548094c3ee6fdf63883bf933b889832ecb8 \
+          --target EMMC:/dev/block/platform/bootdevice/by-name/survival:100663296:5f70ebef3104ad7a0f4e77986150c2e3da28ae63 && \
+      log -t recovery "Installing new ww image: succeeded" || \
+      log -t recovery "Installing new ww image: failed"
+else
+  log -t recovery "ww image already installed"
+fi
